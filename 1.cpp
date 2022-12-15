@@ -1,19 +1,15 @@
 ﻿#include <iostream>
-#include <math.h>
-#include <iomanip>
-#include <algorithm>
 using namespace std;
-double f(int &s)
-{
-    double a, c;
-    a = pow((s / 0, 1875), 1/2);
-    c = sqrt(a * a + a * a);
-    return a * 2 + c;
-}
+int main() {
+    int n;
+    cin >> n;
+    int* a = new int[n];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
 
-int main()
-{
-    int s;
-    cin >> s;
-    cout << f(s);
+    for (int i = n - 3; i < n; i++)
+        a[i] = 0;
+
+    for (int i = 0; i < n; i++)
+        cout << a[i] << "\t";
 }

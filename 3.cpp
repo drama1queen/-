@@ -1,25 +1,15 @@
 ﻿#include <iostream>
-
 using namespace std;
-bool f(double& b)
-{
-    if (b < 0)
-    {
-        b = b * (-1);
-    }
-    if (b != 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+int main() {
+    int n;
+    cin >> n;
+    int* a = new int[n];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
 
-int main()
-{
-    double a;
-    cin >> a;
-    cout << f(a) << endl;
+    for (int i = n - 3; i < n; i++)
+        a[i] = 0;
+
+    for (int i = 0; i < n; i++)
+        cout << a[i] << "\t";
 }
